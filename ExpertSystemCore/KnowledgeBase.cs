@@ -15,9 +15,18 @@ namespace ExpertSystemCore
         {
             // TEST VALUES MAZAFAKA
             // гипотеза ТАЩИТЬ ДОМОЙ
-            facts.Add(new Fact("красное"));
+            facts.Add(new Fact("красное п"));
             facts.Add(new Fact("можно поднять"));
-            conditions.Add(new Condition("хорошее", "тащить домой"));
+            //conditions.add(new condition("хорошее", "тащить домой"));
+            //conditions.add(new condition("красное", "хорошее"));
+            //conditions.add(new condition("можно поднять", "легкое"));
+
+            conditions.Add(new ConditionAnd(new List<AbstractCondition>()
+                {
+                    new Condition("хорошее","тащить домой"),
+                    new Condition("легкое","тащить домой"),
+                },
+                "тащить домой"));
             conditions.Add(new Condition("красное", "хорошее"));
             conditions.Add(new Condition("можно поднять", "легкое"));
         }

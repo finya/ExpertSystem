@@ -8,7 +8,7 @@ namespace ExpertSystemCore
 {
     class Condition: AbstractCondition
     {
-        string condition;
+        public string condition;
 
         public Condition(string condition, string result)
         {

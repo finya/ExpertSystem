@@ -17,7 +17,6 @@ namespace ExpertSystemCore
             foreach (AbstractCondition condition in firstConditions)
             {
                 var azaza = condition.isTruth();
-
             }
         }
     }

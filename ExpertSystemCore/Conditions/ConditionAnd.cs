@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExpertSystemCore
 {
-    class ConditionAnd:AbstractCondition
+    class ConditionAnd : AbstractCondition
     {
-        public List<Condition> conditions = new List<Condition>();
+        public List<AbstractCondition> conditions = new List<AbstractCondition>();
+        public List<Boolean> boolList = new List<bool>();
 
-        public ConditionAnd(List<Condition> conditions, string result)
+        public ConditionAnd(List<AbstractCondition> conditions, string result)
         {
             this.conditions = conditions;
             this.result = result;
@@ -18,7 +19,11 @@ namespace ExpertSystemCore
 
         public override bool isTruth()
         {
-            return true;
+            foreach (AbstractCondition condition in conditions)
+            {
+                boolList.Add(condition.isTruth());
+            }
+            return boolList.Where(p => p == true).ToList().Count == boolList.Count;
         }
     }
 }

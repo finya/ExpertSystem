@@ -2,3 +2,4 @@ C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemCo
 C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemCore\bin\Debug\ExpertSystemCore.pdb
 C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemCore\obj\Debug\ExpertSystemCore.dll
 C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemCore\obj\Debug\ExpertSystemCore.pdb
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemCore\obj\Debug\ExpertSystemCore.csprojResolveAssemblyReference.cache
