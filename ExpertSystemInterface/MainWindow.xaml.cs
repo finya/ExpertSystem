@@ -24,7 +24,9 @@ namespace ExpertSystemInterface
         public MainWindow()
         {
             InitializeComponent();
-            ExpertSystemCore.ExpertSystem.Start();
+            var ExpertSystem = new ExpertSystemCore.ExpertSystem();
+            ExpertSystem.Start();
+            Facts.ItemsSource = KnowledgeBase.facts;
         }
     }
 }

@@ -3,19 +3,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace ExpertSystemCore
 {
     public class KnowledgeBase
     {
-        public static List<Fact> facts = new List<Fact>();
-        public static List<AbstractCondition> conditions = new List<AbstractCondition>();
+        public static ObservableCollection<Fact> facts = new ObservableCollection<Fact>();
+        public static ObservableCollection<AbstractCondition> conditions = new ObservableCollection<AbstractCondition>();
 
         static KnowledgeBase()
         {
             // TEST VALUES MAZAFAKA
             // гипотеза ТАЩИТЬ ДОМОЙ
             facts.Add(new Fact("красное п"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
+
+            facts.Add(new Fact("можно поднять"));
             facts.Add(new Fact("можно поднять"));
             //conditions.add(new condition("хорошее", "тащить домой"));
             //conditions.add(new condition("красное", "хорошее"));

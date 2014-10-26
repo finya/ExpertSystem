@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExpertSystemCore
 {
-    public static class ExpertSystem
+    public class ExpertSystem
     {
-        private static string gip;
+        private  string gip;
 
-        public static void Start()
+        public  void Start()
         {
             gip = "тащить домой";
             var firstConditions = KnowledgeBase.conditions.Where(p => p.result == gip).ToList();
