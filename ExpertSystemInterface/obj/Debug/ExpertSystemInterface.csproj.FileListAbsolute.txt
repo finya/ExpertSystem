@@ -1,0 +1,16 @@
+c:\users\finya\documents\visual studio 2012\Projects\ExpertSystemInterface\ExpertSystemInterface\bin\Debug\ExpertSystemInterface.exe.config
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\bin\Debug\ExpertSystemInterface.exe.config
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\bin\Debug\ExpertSystemInterface.exe
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\bin\Debug\ExpertSystemInterface.pdb
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\MainWindow.baml
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\MainWindow.g.cs
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\App.g.cs
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface_MarkupCompile.cache
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.g.resources
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.Properties.Resources.resources
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.csproj.GenerateResource.Cache
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.exe
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.pdb
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\bin\Debug\ExpertSystemCore.dll
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\bin\Debug\ExpertSystemCore.pdb
+C:\Users\Finya\Documents\Visual Studio 2012\Projects\ExpertSystem\ExpertSystemInterface\obj\Debug\ExpertSystemInterface.csprojResolveAssemblyReference.cache
