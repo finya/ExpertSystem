@@ -9,7 +9,7 @@ namespace ExpertSystemCore
     public abstract class AbstractCondition
     {
         public string result;
-        public virtual bool isTruth()
+        public virtual bool isTruth(Hypothesis hyp)
         {
             return true;
         }

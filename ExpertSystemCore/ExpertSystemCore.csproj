@@ -44,6 +44,7 @@
     <Compile Include="Conditions\ConditionOr.cs" />
     <Compile Include="ExpertSystem.cs" />
     <Compile Include="AbstractCondition.cs" />
+    <Compile Include="Hypothesis.cs" />
     <Compile Include="KnowledgeBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

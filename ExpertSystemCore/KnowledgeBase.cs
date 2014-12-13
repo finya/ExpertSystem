@@ -7,84 +7,49 @@ using System.Collections.ObjectModel;
 
 namespace ExpertSystemCore
 {
-    public class KnowledgeBase
+    public static class KnowledgeBase
     {
-        public static ObservableCollection<Fact> facts = new ObservableCollection<Fact>();
-        public static ObservableCollection<AbstractCondition> conditions = new ObservableCollection<AbstractCondition>();
+        #region fields
+        private static ObservableCollection<Fact> facts = new ObservableCollection<Fact>();
+        private static ObservableCollection<AbstractCondition> conditions = new ObservableCollection<AbstractCondition>();
+        #endregion
 
-        static KnowledgeBase()
+        #region properties
+        public static ObservableCollection<Fact> Facts
         {
-            // TEST VALUES MAZAFAKA
-            // гипотеза ТАЩИТЬ ДОМОЙ
-            facts.Add(new Fact("красное п"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-
-            facts.Add(new Fact("можно поднять"));
-            facts.Add(new Fact("можно поднять"));
-            //conditions.add(new condition("хорошее", "тащить домой"));
-            //conditions.add(new condition("красное", "хорошее"));
-            //conditions.add(new condition("можно поднять", "легкое"));
-
-            conditions.Add(new ConditionAnd(new List<AbstractCondition>()
-                {
-                    new Condition("хорошее","тащить домой"),
-                    new Condition("легкое","тащить домой"),
-                },
-                "тащить домой"));
-            conditions.Add(new Condition("красное", "хорошее"));
-            conditions.Add(new Condition("можно поднять", "легкое"));
+            get { return facts; }
+            set { facts = value; }
         }
 
+        public static ObservableCollection<AbstractCondition> Conditions
+        {
+            get { return conditions; }
+            set { conditions = value; }
+        }
+        #endregion
+
+        public static void resetBase()
+        {
+            facts = new ObservableCollection<Fact>();
+            conditions = new ObservableCollection<AbstractCondition>();
+        }
     }
+
 
     public class Fact
     {
         private string property;
+        private string obj;
 
         public string Property
         {
-            get { return property; }
+            get { return obj + " " + property; }
         }
 
-        public Fact(string property)
+        public Fact(string property, string obj)
         {
             this.property = property;
+            this.obj = obj;
         }
-
-
     }
 }

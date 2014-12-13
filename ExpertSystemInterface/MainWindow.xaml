@@ -1,69 +1,51 @@
 ﻿<Window x:Class="ExpertSystemInterface.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Экспертная система" MinHeight="600" MinWidth="400">
+        Title="Экспертная система" MinHeight="300" MinWidth="200" Width="600">
     <Grid>
-        <TabControl>
-            <TabItem Header="Добавление информации">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+            <ColumnDefinition Width="50*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Header="Заполнение и проверка">
+            <StackPanel>
+                <Button Click="SelectFile">Выбрать файл</Button>
+                <Label>Введите гипотезу:</Label>
+                <DockPanel>
+                    <Label>Объект:</Label>
+                    <TextBox Width="200" HorizontalAlignment="Right" Name="HypObj" />
+                </DockPanel>
+                <DockPanel>
+                    <Label>Свойство:</Label>
+                    <TextBox Width="200" HorizontalAlignment="Right" Name="HypValue"/>
+                </DockPanel>
+                <Button Click="Start" Margin="0,10,0,0">Проверить гипотезу..</Button>
+                <TextBlock Name="Result"/>
+            </StackPanel>
+        </GroupBox>
+      
+        <DockPanel Grid.Column="1">
+            <GroupBox Header="Имеющиеся данные:">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="39*"/>
-                        <ColumnDefinition Width="66*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <GroupBox Grid.Column="0" Header="Факты">
-                        <StackPanel>
-                            <TextBlock TextAlignment="Center">Введите факты.</TextBlock>
-                            <TextBlock TextAlignment="Center" Padding="0,0,0,10">Формат: "объект" + "сведение".</TextBlock>
-                            <TextBlock>Название/имя объекта</TextBlock>
-                            <TextBox x:Name="FactObject"/>
-                            <TextBlock>Информация</TextBlock>
-                            <TextBox x:Name="FactInfo" />
-                            <Button Margin="0,10,0,10">Добавить!</Button>
-                            <TextBlock TextAlignment="Center">Имеющиеся факты:</TextBlock>
-                            <ListBox Name="Facts" MaxHeight="300" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding Property}"/>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                        </StackPanel>
-                    </GroupBox>
-                    <GroupBox Grid.Column="1" Header="Условия">
-                        <StackPanel>
-                            <TextBlock TextAlignment="Center">Введите условия.</TextBlock>
-                            <TextBlock  TextAlignment="Center">Формат : если "A", то "В"</TextBlock>
-                            <TextBlock TextAlignment="Center" Padding="0,0,0,10"> &amp; - логическое И; || - логическое ИЛИ</TextBlock>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="5*"/>
-                                    <ColumnDefinition Width="50*"/>
-                                    <ColumnDefinition Width="20*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Margin="0,0,5,0">Если</TextBlock>
-                                <TextBox x:Name="ConditionIf" Grid.Column="1"/>
-                            </Grid>
-                            <TextBlock Height="10"></TextBlock>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="5*"/>
-                                    <ColumnDefinition Width="30*"/>
-                                    <ColumnDefinition Width="65*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Margin="0,0,5,0">то</TextBlock>
-                                <TextBox x:Name="ConditionThen" Grid.Column="1" Grid.ColumnSpan="2" Margin="9,0,290,0"></TextBox>
-                            </Grid>
-                            <Button Margin="0,10,0,10">Добавить условие!</Button>
-                            <ListBox x:Name="Conditions"  MaxHeight="400" >
-                                
-                            </ListBox>
-                        </StackPanel>
-
-                    </GroupBox>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25*"></RowDefinition>
+                        <RowDefinition Height="25*"></RowDefinition>
+                        <RowDefinition Height="25*"></RowDefinition>
+                        <RowDefinition Height="25*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ListBox Name="Facts" Grid.Row="0" BorderThickness="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Property}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <ListBox Name="SimpleConditions" Grid.Row="1" BorderThickness="1"></ListBox>
+                    <ListBox Name="ConditionsAnd" Grid.Row="2" BorderThickness="1"></ListBox>
+                    <ListBox Name="ConditionsOr" Grid.Row="3" BorderThickness="1"></ListBox>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Общая информация"></TabItem>
-        </TabControl>
+            </GroupBox>
+        </DockPanel>
+
     </Grid>
 </Window>

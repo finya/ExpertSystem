@@ -8,15 +8,17 @@ namespace ExpertSystemCore
 {
     public class ExpertSystem
     {
-        private  string gip;
-
-        public  void Start()
+        public bool checkHypothesis(string obj, string value)
         {
-            gip = "тащить домой";
-            var firstConditions = KnowledgeBase.conditions.Where(p => p.result == gip).ToList();
-            foreach (AbstractCondition condition in firstConditions)
+            try
             {
-                var azaza = condition.isTruth();
+                var hypothesis = new Hypothesis(obj, value);
+                var startCondition = KnowledgeBase.Conditions.Where(p => p.result == hypothesis.Value).ToList()[0];
+                return startCondition.isTruth(hypothesis);
+            }
+            catch
+            {
+                return false;
             }
         }
     }
